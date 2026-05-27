@@ -40,6 +40,15 @@ bash bootstrap.sh
 1. **iTerm2 font**: Settings → Profiles → Text → change font to `Hack Nerd Font Mono`
 2. **QuickLook plugins**: System Settings → Privacy & Security → Extensions → Quick Look
    → enable QLMarkdown and Syntax Highlight
+3. **SSH**: Run `bash ssh.sh` to generate a key to authenticate via SSH with GitHub (involves one time auth). After this is done, 
+
+    ```bash
+    cd ~/.dotfiles
+    git remote set-url origin git@github.com:mrdowdeswell/.dotfiles.git
+    ```
+
+    to set the `.dotfiles` repo to SSH authentication.
+4. **UTM clipboard sharing**: Install the Spice Guest Tools in the UTM VM to enable host/guest clipboard sharing.
 
 ## Optional roles
 
