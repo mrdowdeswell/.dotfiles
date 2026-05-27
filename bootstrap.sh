@@ -41,6 +41,10 @@ if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 fi
 
+# ── Change iTerm2 font ────────────────────────────────────────────────────────
+
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" "HackNFM-Regular 12"' ~/Library/Preferences/com.googlecode.iterm2.plist
+
 # ── Dotfiles (symlinks) ───────────────────────────────────────────────────────
 echo "==> Symlinking dotfiles..."
 ln -sf "$DOTFILES_DIR/dotfiles/.zshrc" "$HOME/.zshrc"
@@ -63,11 +67,10 @@ echo ""
 echo "==> Bootstrap complete."
 echo ""
 echo "    Manual steps remaining:"
-echo "    1. Open iTerm2 → Settings → Profiles → Text → change font to 'Hack Nerd Font Mono'"
-echo "    2. Enable QuickLook plugins: System Settings → Privacy & Security → Extensions → Quick Look"
-echo '    3. Run `bash ssh.sh` to generate a key to authenticate via SSH with GitHub (involves one time auth).'
+echo "    1. Enable QuickLook plugins: System Settings → Privacy & Security → Extensions → Quick Look"
+echo '    2. Run `bash ssh.sh` to generate a key to authenticate via SSH with GitHub (involves one time auth).'
 echo '       After this is done, `git remote set-url origin git@github.com:mrdowdeswell/.dotfiles.git` to set the `.dotfiles` repo to SSH authentication.'
-echo "    4. If this is a UTM VM, install Spice Guest Tools to enable clipboard sharing between host and guest"
+echo "    3. If this is a UTM VM, install Spice Guest Tools to enable clipboard sharing between host and guest"
 echo ""
 echo "    Optional role scripts available in roles/:"
 echo "      bash roles/r.sh"

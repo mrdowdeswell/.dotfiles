@@ -30,6 +30,8 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 # Default to list view
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+# Keep folders on top
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
@@ -42,6 +44,8 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 # Don't show recent apps in Dock
 defaults write com.apple.dock show-recents -bool false
+# Smaller dock icons
+defaults write com.apple.dock "tilesize" -int "48"
 
 # ── Reload affected services ──────────────────────────────────────────────────
 killall Dock    2>/dev/null || true
