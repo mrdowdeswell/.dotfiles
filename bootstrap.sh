@@ -7,15 +7,6 @@ DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "==> Starting bootstrap..."
 
-# ── Xcode Command Line Tools ─────────────────────────────────────────────────
-if ! xcode-select -p &>/dev/null; then
-  echo "==> Installing Xcode Command Line Tools..."
-  xcode-select --install
-  # Wait for installation to complete before proceeding
-  echo "    Re-run this script once Xcode CLT installation is complete."
-  exit 0
-fi
-
 # ── Homebrew ──────────────────────────────────────────────────────────────────
 if ! command -v brew &>/dev/null; then
   echo "==> Installing Homebrew..."
@@ -66,7 +57,7 @@ echo ""
 echo "    Manual steps remaining:"
 echo "    1. Open iTerm2 → Settings → Profiles → Text → change font to 'Hack Nerd Font Mono'"
 echo "    2. Enable QuickLook plugins: System Settings → Privacy & Security → Extensions → Quick Look"
-echo "    3. Start a new zsh session (or: source ~/.zshrc)"
+echo "    3. If this is a UTM VM, install Spice Guest Tools to enable clipboard sharing between host and guest"
 echo ""
 echo "    Optional role scripts available in roles/:"
 echo "      bash roles/r.sh"
