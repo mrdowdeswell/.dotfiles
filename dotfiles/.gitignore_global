@@ -1,0 +1,11 @@
+.DS_Store
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.positai
+.quarto
+.httr-oauth
+*_cache/                                   
+*_files/
+*-tikzDictionary

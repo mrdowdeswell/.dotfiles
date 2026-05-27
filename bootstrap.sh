@@ -46,11 +46,14 @@ echo "==> Symlinking dotfiles..."
 ln -sf "$DOTFILES_DIR/dotfiles/.zshrc" "$HOME/.zshrc"
 mkdir -p "$HOME/.config"
 ln -sf "$DOTFILES_DIR/dotfiles/starship.toml" "$HOME/.config/starship.toml"
+ln -sf "$DOTFILES_DIR/dotfiles/.gitignore_global" "$HOME/.gitignore_global"
 
 # ── git user name & email ─────────────────────────────────────────────────────
 echo "==> Setting git user name and email..."
 git config --global user.name "Mark Dowdeswell"
 git config --global user.email "123539509+mrdowdeswell@users.noreply.github.com"
+git config --global core.excludesfile ~/.gitignore_global
+git config --global core.pager "less -FXR"
 
 # ── macOS defaults ────────────────────────────────────────────────────────────
 echo "==> Applying macOS defaults..."
@@ -62,7 +65,8 @@ echo ""
 echo "    Manual steps remaining:"
 echo "    1. Open iTerm2 → Settings → Profiles → Text → change font to 'Hack Nerd Font Mono'"
 echo "    2. Enable QuickLook plugins: System Settings → Privacy & Security → Extensions → Quick Look"
-echo "    3. Run `bash ssh.sh` to generate a key to authenticate via SSH with GitHub (involves one time auth). After this is done, `git remote set-url origin git@github.com:mrdowdeswell/.dotfiles.git` to set the `.dotfiles` repo to SSH authentication."
+echo '    3. Run `bash ssh.sh` to generate a key to authenticate via SSH with GitHub (involves one time auth).'
+echo '       After this is done, `git remote set-url origin git@github.com:mrdowdeswell/.dotfiles.git` to set the `.dotfiles` repo to SSH authentication.'
 echo "    4. If this is a UTM VM, install Spice Guest Tools to enable clipboard sharing between host and guest"
 echo ""
 echo "    Optional role scripts available in roles/:"
