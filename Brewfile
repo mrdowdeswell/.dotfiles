@@ -1,9 +1,6 @@
 # Brewfile — managed by bootstrap.sh
 # Install everything: brew bundle --file=Brewfile
 
-# ── Taps ─────────────────────────────────────────────────────────────────────
-tap "homebrew/cask-fonts"
-
 # ── CLI tools ─────────────────────────────────────────────────────────────────
 brew "git"
 brew "starship"
