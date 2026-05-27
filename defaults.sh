@@ -43,13 +43,6 @@ defaults write com.apple.dock autohide-time-modifier -float 0.5
 # Don't show recent apps in Dock
 defaults write com.apple.dock show-recents -bool false
 
-# ── Screenshots ───────────────────────────────────────────────────────────────
-# Save screenshots to ~/Desktop/Screenshots rather than cluttering the desktop
-mkdir -p "$HOME/Desktop/Screenshots"
-defaults write com.apple.screencapture location -string "$HOME/Desktop/Screenshots"
-# Save as PNG
-defaults write com.apple.screencapture type -string "png"
-
 # ── Reload affected services ──────────────────────────────────────────────────
 killall Dock    2>/dev/null || true
 killall Finder  2>/dev/null || true
