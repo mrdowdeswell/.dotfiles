@@ -8,15 +8,16 @@ macOS bootstrap for a fresh install (UTM VM or physical machine).
 .dotfiles/
 ├── bootstrap.sh          # run once on a fresh machine
 ├── Brewfile              # all Homebrew packages and casks
-├── defaults.sh           # macOS UI preferences via `defaults write`
+├── macOS_defaults.sh     # macOS UI preferences via `defaults write`
+├── ssh.sh                # prepare for SSH auth with GitHub
 ├── dotfiles/
 │   ├── .zshrc            # symlinked to ~/.zshrc
 │   └── starship.toml     # symlinked to ~/.config/starship.toml
 └── roles/                # optional, run selectively after bootstrap
     ├── r.sh
     ├── vscode.sh
-    ├── docker.sh
-    └── claudecode.sh
+    ├── claudecode.sh
+    └── docker.sh
 ```
 
 ## Fresh machine setup

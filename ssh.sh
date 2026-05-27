@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# roles/ssh.sh — generate SSH key and register with GitHub
+# ssh.sh — generate SSH key and register with GitHub
 set -euo pipefail
  
 echo "==> Setting up SSH key..."
@@ -42,5 +42,5 @@ ssh -T git@github.com 2>&1 || true
 # ssh -T exits with code 1 even on success ("Hi username!"), hence `|| true`
  
 echo ""
-echo "==> SSH role complete."
+echo "==> SSH setup complete."
 

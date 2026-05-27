@@ -47,14 +47,14 @@ ln -sf "$DOTFILES_DIR/dotfiles/.zshrc" "$HOME/.zshrc"
 mkdir -p "$HOME/.config"
 ln -sf "$DOTFILES_DIR/dotfiles/starship.toml" "$HOME/.config/starship.toml"
 
-# ── git user name -────────────────────────────────────────────────────────────
+# ── git user name & email ─────────────────────────────────────────────────────
 echo "==> Setting git user name and email..."
 git config --global user.name "Mark Dowdeswell"
 git config --global user.email "123539509+mrdowdeswell@users.noreply.github.com"
 
 # ── macOS defaults ────────────────────────────────────────────────────────────
 echo "==> Applying macOS defaults..."
-bash "$DOTFILES_DIR/defaults.sh"
+bash "$DOTFILES_DIR/macOS_defaults.sh"
 
 echo ""
 echo "==> Bootstrap complete."
