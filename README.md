@@ -22,7 +22,7 @@ macOS bootstrap for a fresh install (UTM VM or physical machine).
 ## Fresh machine setup
 
 ```bash
-git clone https://github.com/you/.dotfiles ~/.dotfiles
+git clone https://github.com/mrdowdeswell/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 bash bootstrap.sh
 ```
