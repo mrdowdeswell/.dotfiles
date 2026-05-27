@@ -1,0 +1,74 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "wolfram.kernel": "/Applications/Wolfram.app/Contents/MacOS/WolframKernel",
+    "wolfram.command": [
+        "`kernel`",
+        "-noinit",
+        "-noprompt",
+        "-nopaclet",
+        "-noicon",
+        "-nostartuppaclets",
+        "-run",
+        "Needs[\"LSPServer`\"];LSPServer`StartServer[]"
+    ],
+    "diffEditor.codeLens": true,
+    "continue.telemetryEnabled": false,
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "remote.autoForwardPortsSource": "hybrid",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "wolfram": false
+    },
+    "lean4.alwaysAskBeforeInstallingLeanVersions": true,
+    "containers.images.sortBy": "CreatedTime",
+    "containers.images.label": "Size",
+    "editor.wordWrap": "on",
+    "[lean4]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.wordSeparators": "`~@$%^&*()-=+[{]}⟨⟩⦃⦄⟦⟧⟮⟯‹›\\|;:\",.<>/",
+        "files.encoding": "utf8",
+        "files.eol": "\n",
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true
+    },
+    "wolfram.notebook.kernelEnabled": true,
+    "[wolfram]": {},
+    "notebook.editorOptionsCustomizations": {
+        "editor.tabSize": 2,
+        "editor.indentSize": 2,
+        "editor.insertSpaces": false
+    },
+    "wolfram.advanced.lsp.command": [
+        "lspKernel"
+    ],
+    "r.bracketedPaste": true,
+    "r.plot.useHttpgd": true,
+    "r.removeLeadingComments": true,
+    "r.rterm.mac": "${userHome}/Library/Python/3.9/bin/radian",
+    "jupyter.askForKernelRestart": false,
+    "files.exclude": {
+        "**/.git": false
+    },
+    "r.rmarkdown.knit.command": "Sys.setenv(RSTUDIO_PANDOC=\"/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64\"); rmarkdown::render",
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.initialPermissionMode": "plan",
+    "claudeCode.usePythonEnvironment": false,
+    "chat.fontSize": 12,
+    "chat.viewSessions.orientation": "stacked",
+    "r.rmarkdown.knit.focusOutputChannel": false,
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.compact": true,
+    "workbench.browser.showInTitleBar": true,
+    "pdf-viewer.invert": true,
+    "extensions.autoUpdate": false
+}
