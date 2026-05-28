@@ -42,7 +42,13 @@ if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
 fi
 
 # ── Change iTerm2 font ────────────────────────────────────────────────────────
-/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" "HackNFM-Regular 12"' ~/Library/Preferences/com.googlecode.iterm2.plist
+ITERM_PLIST="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
+if [ -f "$ITERM_PLIST" ]; then
+  /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" "HackNFM-Regular 12"' "$ITERM_PLIST" 2>/dev/null \
+    || /usr/libexec/PlistBuddy -c 'Add :"New Bookmarks":0:"Normal Font" string "HackNFM-Regular 12"' "$ITERM_PLIST"
+else
+  echo "    Note: iTerm2 not yet launched — open it once, then re-run bootstrap to apply font."
+fi
 
 # ── Dotfiles (symlinks) ───────────────────────────────────────────────────────
 echo "==> Symlinking dotfiles..."
@@ -74,5 +80,5 @@ echo ""
 echo "    Optional role scripts available in roles/:"
 echo "      bash roles/r.sh"
 echo "      bash roles/vscode.sh"
-echo "      bash roles/docker.sh"
 echo "      bash roles/claudecode.sh"
+echo "      bash roles/docker.sh"

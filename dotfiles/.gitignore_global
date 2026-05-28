@@ -9,3 +9,4 @@
 *_cache/                                   
 *_files/
 *-tikzDictionary
+**/.claude/settings.local.json
