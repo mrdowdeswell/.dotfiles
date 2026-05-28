@@ -70,5 +70,13 @@
     "workbench.activityBar.compact": true,
     "workbench.browser.showInTitleBar": true,
     "pdf-viewer.invert": true,
-    "extensions.autoUpdate": false
+    "extensions.autoUpdate": false,
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
+        }
+    }
 }

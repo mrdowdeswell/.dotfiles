@@ -42,15 +42,14 @@ if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
 fi
 
 # ── Change iTerm2 font ────────────────────────────────────────────────────────
-
 /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" "HackNFM-Regular 12"' ~/Library/Preferences/com.googlecode.iterm2.plist
 
 # ── Dotfiles (symlinks) ───────────────────────────────────────────────────────
 echo "==> Symlinking dotfiles..."
 ln -sf "$DOTFILES_DIR/dotfiles/.zshrc" "$HOME/.zshrc"
+ln -sf "$DOTFILES_DIR/dotfiles/.gitignore_global" "$HOME/.gitignore_global"
 mkdir -p "$HOME/.config"
 ln -sf "$DOTFILES_DIR/dotfiles/starship.toml" "$HOME/.config/starship.toml"
-ln -sf "$DOTFILES_DIR/dotfiles/.gitignore_global" "$HOME/.gitignore_global"
 
 # ── git user name & email ─────────────────────────────────────────────────────
 echo "==> Setting git user name and email..."
